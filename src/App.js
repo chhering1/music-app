@@ -1,13 +1,9 @@
 import React from 'react';
 import OneSignal from 'react-onesignal';
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route } from "react-router-dom";
-import Home from './components/Home'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from './components/Home';
 import Page from './components/Page';
-import PWAPrompt from 'react-ios-pwa-prompt'
+import PWAPrompt from 'react-ios-pwa-prompt';
 import NotFound from './components/NotFound';
 
 OneSignal.initialize('5b3a22fc-2124-44ec-b0ab-5492c3657396', {
@@ -31,7 +27,7 @@ function App()  {
       
     </Switch>
     </Router>
-    <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
+    <PWAPrompt promptOnVisit={2} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
     </>
     )
 }
