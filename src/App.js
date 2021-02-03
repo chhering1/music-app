@@ -10,8 +10,8 @@ import Page from './components/Page';
 import PWAPrompt from 'react-ios-pwa-prompt'
 import NotFound from './components/NotFound';
 
-OneSignal.initialize('8a753e99-73aa-4f8f-8770-55e767c8e733', {
-    safari_web_id: 'web.onesignal.auto.1a1cd43f-104c-4ac2-b069-e07775f1eeb9'
+OneSignal.initialize('5b3a22fc-2124-44ec-b0ab-5492c3657396', {
+    safari_web_id: 'web.onesignal.auto.10d6980b-bbad-483e-b993-08fa2a289dd8'
   });
 
 function App()  {
