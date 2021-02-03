@@ -1,10 +1,10 @@
 import React from 'react';
 import OneSignal from 'react-onesignal';
-// import { Router } from '@reach/router';
+
 import {
   BrowserRouter as Router,
   Switch,
-  Route, Link } from "react-router-dom";
+  Route } from "react-router-dom";
 import Home from './components/Home'
 import Page from './components/Page';
 import PWAPrompt from 'react-ios-pwa-prompt'
@@ -18,12 +18,6 @@ function App()  {
     return (
       <>
       <Router>
-      <nav>
-        <Link to="/">  homepage</Link>
-        <Link to="/page"> subpage </Link>
-      </nav>
-
-      
       <Switch>
       <Route exact path="/">
         <Home />
@@ -31,8 +25,8 @@ function App()  {
       <Route path="/page">
         <Page />
       </Route>
-      <Route path="/notfound">
-        <NotFound default />
+      <Route default >
+        <NotFound  />
       </Route>
       
     </Switch>
