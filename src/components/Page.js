@@ -1,9 +1,52 @@
+import {Link } from 'react-router-dom';
+import AudioPlayer from 'react-h5-audio-player';
+import Localbase from 'localbase'
+import 'react-h5-audio-player/lib/styles.css';
+import { useState,useEffect } from 'react';
+import '../App.css';
 
 const Page = () => {
+    let db = new Localbase('db');
+   
+    const [data, setData ] = useState('')
+
+     useEffect(() => {
+        let db = new Localbase('db');
+           db.collection('songs').get().then( res => setData(res))
+    }, [setData]);
+
+    const removeSong =  (e) => {
+        console.log(e.target.dataset.song)
+        db.collection('songs').doc({
+            name : e.target.dataset.song
+    }).delete();
+    window.location.reload();
+      }
+    
+  console.log(data)
+
      return (  
-         <div>
-               <h2>det er underside</h2>
-               <img src="https://images.8tracks.com/cover/i/000/837/819/Amazing-Music-Of-Wallpaper-3296.jpg?rect=360,0,1200,1200&q=98&fm=jpg&fit=max&w=640&h=640" alt="" height="500px" width="700px"/>
+         <div className="playlist-page">
+          
+
+             <h3>Here is your Offline playlist</h3>
+             
+             <ul>
+               {data && data.map( (item) => (
+                    <li key={item.id}>
+                       <h4>{item.name}</h4>
+                       <AudioPlayer src={item.url}/>
+                       <button onClick={removeSong} data-song={item.name}>remove from playlist</button>
+                     </li>
+               ))}   
+             </ul>
+
+             <nav>
+                      <Link to="/" className="Link">  Home</Link>
+                      <Link to="/playlists"  className="Link"> Offline-Playlist </Link>
+                      <Link to="/songs"  className="Link"> All songs </Link>
+
+        </nav>
          </div>
      );
  }

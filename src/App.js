@@ -18,7 +18,7 @@ function App()  {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/page">
+      <Route path="/playlists">
         <Page />
       </Route>
       <Route default >
@@ -27,7 +27,7 @@ function App()  {
       
     </Switch>
     </Router>
-    <PWAPrompt promptOnVisit={2} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
+    <PWAPrompt promptOnVisit={1} timesToShow={10} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
     </>
     )
 }
