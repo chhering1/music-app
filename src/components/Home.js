@@ -31,7 +31,7 @@ const Home = () => {
             
                <h1 className="title">"MUSIC IS A PIECE OF ART THAT GOES IN THE EARS STREIGHT TO THE HEART"</h1>
           </main>
- <br/> <br/>
+ <br/>
           <Collapsible trigger="🎵 Random songs" className="collapse">
             
               <ul>
@@ -56,7 +56,7 @@ const Home = () => {
                 
               </ul>
               </Collapsible>
-           <br/> <br/>
+        
 
           <Collapsible trigger="🎵 Badshah songs" className="collapse">
         <div className="songs-lists">
@@ -77,7 +77,7 @@ const Home = () => {
           <AudioPlayer   src={genda} />
         </div>
         </Collapsible>
-         <br/> <br/>
+      
 
         <Collapsible trigger="🎵 Vishal-dadlani songs" className="collapse">
         <div className="songs-lists ">
