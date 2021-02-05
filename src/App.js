@@ -24,10 +24,9 @@ function App()  {
       <Route default >
         <NotFound  />
       </Route>
-      
     </Switch>
     </Router>
-    <PWAPrompt promptOnVisit={1} timesToShow={10} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
+    <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false}/>
     </>
     )
 }

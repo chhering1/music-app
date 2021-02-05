@@ -36,8 +36,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-sw": "node ./src/sw-build.js"
+    "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
